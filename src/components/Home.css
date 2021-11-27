@@ -1,0 +1,148 @@
+.Home {
+	width: 100%;
+}
+
+.content {
+	width: min(720px, 100%);
+	padding: 0 1em;
+
+	flex-direction: column;
+}
+
+.Home .text-section {
+	width: 100%;
+	text-align: left;
+}
+
+.Home .wave-section {
+	width: 100%;
+}
+
+/* ----- TEXT TOGGLING ----- */
+.Home .toggle-text {
+	font-size: 0.8rem;
+
+	margin: 1em 0;
+
+	color: #717171;
+}
+.Home .toggle-text:hover {
+	cursor: pointer;
+}
+.Home .toggle-text p {
+	margin: 0;
+	margin-right: 0.6em;
+}
+.Home .toggle-text.hiding .toggle-replace {
+	display: none;
+}
+.Home .toggle-text.hiding::before {
+	margin-right: 0.5em;
+	content: "show";
+}
+.Home .toggle-text.hiding .chevron {
+	transform: rotateZ(180deg) translateY(-1px);
+}
+
+/* ----- INTRO TEXT ----- */
+.Home .intro .tagline {
+	font-weight: 600;
+
+	margin: 3em 0;
+	
+	color: #717171;
+}
+.Home .intro .tagline p {
+	margin-right: 1em;
+}
+
+/* ----- RAW SAMPLE ----- */
+.Home .record-button {
+	font-size: 0.86rem;
+	
+	padding: 0.5em 0.7em;
+}
+.Home .record-button:hover {
+	cursor: pointer;
+
+	color: #E19500;
+}
+
+.Home .record-button p {
+	margin: 0;
+	margin-left: 0.5em;
+}
+
+/* ----- APPROXIMATE WAVEFORM ----- */
+.Home .range-label {
+	font-size: 0.76rem;
+	margin-right: 3em;
+
+	align-self: start;
+
+	color: #717171;
+}
+
+.Home .range-inner-wrapper {
+	flex-grow: 1;
+}
+
+.Home .range-inner-wrapper p {
+	font-size: 0.76rem;
+	font-weight: 600;
+	margin: 0 0.5em;
+	
+	color: #717171;
+}
+
+.Home .wave-range {
+	flex-grow: 1;
+	-webkit-appearance: none;
+	appearance: none;
+
+	background-color: transparent;
+}
+.Home .wave-range:hover {
+	cursor: pointer;
+}
+.Home .wave-range::-moz-range-track, .Home .wave-range::-webkit-slider-runnable-track {
+	background-color: #8D8D8D;
+	height: 3px;
+}
+.Home .wave-range::-moz-range-thumb, .Home .wave-range::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	background-color: #E19500;
+	width: 15px; height: 15px;
+
+	border-radius: 20px;
+	border: none;
+}
+
+
+
+/* ----- HARMONICS ----- */
+.Home .label-wrapper {
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Home .reset-button {
+	font-size: 0.71rem;
+
+	color: #5E5E5E;
+}
+.Home .reset-button:hover {
+	cursor: pointer;
+}
+
+.Home .reset-button p {
+	margin: 0;
+	margin-left: 0.5em;
+}
+
+.Home .harmonics-wrapper {
+	overflow-x: auto;
+}
