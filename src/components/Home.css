@@ -121,7 +121,7 @@
 
 
 
-/* ----- HARMONICS ----- */
+/* ----- WAVES ----- */
 .Home .label-wrapper {
 	width: 100%;
 
@@ -144,9 +144,9 @@
 	margin-left: 0.5em;
 }
 
-.Home .harmonics-wrapper {
+.Home .waves-wrapper {
 	width: 100%;
-	max-height: 628px;
+	max-height: 444px;
 	padding-right: 0.4em;
 
 	display: grid;
@@ -157,4 +157,6 @@
 	overflow-x: none;
 	scrollbar-width: thin;
 	scrollbar-color: #B8B8B8 transparent;
+
+	z-index: 1;
 }
