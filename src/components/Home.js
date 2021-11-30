@@ -1,4 +1,5 @@
 import React from 'react';
+import AudioDisplay from '../components/AudioDisplay';
 
 import {ReactComponent as Chevron} from '../icons/chevron.svg';
 import {ReactComponent as Microphone} from '../icons/microphone.svg';
@@ -27,6 +28,7 @@ function Home(props) {
 
 				<div className="raw-sample wave-section center-col">
 					<p className="label">Raw sample:</p>
+					<AudioDisplay stats={{"samples": "32,768", "amp": "2"}} downloadable />
 					<div className="record-button boxed center-row">
 						<Microphone />
 						<p>start recording</p>
@@ -39,12 +41,13 @@ function Home(props) {
 
 				<div className="approximation wave-section">
 					<p className="label">Approximate waveform:</p>
+					<AudioDisplay stats={{"waves": "100", "amp": "2"}} downloadable />
 					<div className="range-outer-wrapper center-row">
 						<p className="range-label">Amount of waves:</p>
 						<div className="range-inner-wrapper center-row">
 							<p className="range-min">1</p>
-							<input type="range" className="wave-range" />
-							<p className="range-max">100</p>
+							<input type="range" className="wave-range" min="1" max="1000" step="5" />
+							<p className="range-max">1000</p>
 						</div>
 					</div>
 				</div>
@@ -56,14 +59,20 @@ function Home(props) {
 
 				<div className="harmonics wave-section center-col">
 					<div className="label-wrapper">
-						<p className="label">Raw sample:</p>
+						<p className="label">Harmonics:</p>
 						<div className="reset-button center-row">
 							<Reset />
 							<p>reset</p>
 						</div>
 					</div>
 					<div className="harmonics-wrapper">
-												
+						<AudioDisplay id="1" stats={{"freq": "350Hz", "amp": "1.8"}} mini />
+						<AudioDisplay id="2" stats={{"freq": "350Hz", "amp": "1.5"}} mini />
+						<AudioDisplay id="3" stats={{"freq": "350Hz", "amp": "1.2"}} mini />
+						<AudioDisplay id="4" stats={{"freq": "350Hz", "amp": "0.9"}} mini />
+						<AudioDisplay id="5" stats={{"freq": "350Hz", "amp": "0.6"}} mini />
+						<AudioDisplay id="6" stats={{"freq": "350Hz", "amp": "0.3"}} mini />
+						<AudioDisplay id="7" stats={{"freq": "350Hz", "amp": "0.1"}} mini />
 					</div>
 				</div>
 			</div>

@@ -61,6 +61,7 @@
 	font-size: 0.86rem;
 	
 	padding: 0.5em 0.7em;
+	margin-top: 1rem;
 }
 .Home .record-button:hover {
 	cursor: pointer;
@@ -144,5 +145,16 @@
 }
 
 .Home .harmonics-wrapper {
-	overflow-x: auto;
+	width: 100%;
+	max-height: 628px;
+	padding-right: 0.4em;
+
+	display: grid;
+	grid-template-rows: 1fr;
+	gap: 16px;
+	
+	overflow-y: auto;
+	overflow-x: none;
+	scrollbar-width: thin;
+	scrollbar-color: #B8B8B8 transparent;
 }

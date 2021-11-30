@@ -1,0 +1,72 @@
+.AudioDisplay {
+	width: 100%;
+
+	border: 1px solid #8D8D8D;
+	background-color: #3533160D;
+}
+
+.AudioDisplay .controls {
+	width: 2rem;
+	height: 100%;
+
+	outline: 1px solid #8D8D8D;
+	background-color: #38361D19;
+}
+
+.AudioDisplay .play-button:hover {
+	cursor: pointer;
+}
+
+.AudioDisplay .data	{
+	height: 100%;
+	flex-grow: 1;
+	padding-bottom: 0.2em;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.AudioDisplay .id {
+	font-size: 0.71rem;
+	font-weight: bold;
+
+	padding: 0 0.25em;
+
+	color: #606060;
+	background-color: #38361D26;
+}
+
+.AudioDisplay .waveform {
+	width: 100%;
+}
+
+.AudioDisplay .info {
+	position: relative;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.AudioDisplay .stats {
+	width: 100%;
+}
+
+.AudioDisplay .stat {
+	font-size: 0.76em;
+
+	margin: 0 0.4em;
+
+	color: #808080;
+}
+
+.AudioDisplay .download-button {
+	position: absolute;
+	padding-right: 1em;
+}
+.AudioDisplay .download-button:hover {
+	cursor: pointer;
+}

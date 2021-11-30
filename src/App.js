@@ -1,6 +1,7 @@
 import './App.css';
 import './components/Navbar.css';
 import './components/Home.css';
+import './components/AudioDisplay.css';
 import './components/Footer.css';
 
 import Navbar from './components/Navbar';
