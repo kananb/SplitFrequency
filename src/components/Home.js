@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import AudioDisplay from '../components/AudioDisplay';
+import RecordButtton from '../components/RecordButton';
 import FFTWave from '../components/FFTWave';
 
 import {ReactComponent as Chevron} from '../icons/chevron.svg';
@@ -69,8 +70,8 @@ function Home(props) {
 		});
 	});
 
-	const onRecord = () => {
-		if (recorder.state !== "recording") recorder.start();
+	const onRecord = (recording) => {
+		if (recording) recorder.start();
 		else {
 			finished = true;
 			recorder.stop();
@@ -108,10 +109,7 @@ function Home(props) {
 				<div className="raw-sample wave-section center-col">
 					<p className="label">Raw sample:</p>
 					<AudioDisplay stats={{"samples": "32,768", "amp": "2"}} downloadable play={playRecording} />
-					<div className="record-button boxed center-row" onClick={onRecord}>
-						<Microphone />
-						<p>start recording</p>
-					</div>
+					<RecordButtton onRecord={onRecord} />
 				</div>
 
 				<div className="text-section">
